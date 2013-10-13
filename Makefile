@@ -1,13 +1,12 @@
+NAME=CV_Attila_Nagy
 all: build view
 
 view:
-	mupdf cv-plaincv-howtotex.pdf
-
+	mupdf $(NAME).pdf
 
 build:
-	texi2pdf cv-plaincv-howtotex.tex
-	rm cv-plaincv-howtotex.{aux,log}
-
+	texi2pdf $(NAME).tex
+	rm $(NAME).{aux,log}
 
 clean:
-	rm cv-plaincv-howtotex.{aux,log,pdf}
+	rm $(NAME).{aux,log,pdf}
