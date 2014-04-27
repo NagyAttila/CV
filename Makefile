@@ -1,5 +1,5 @@
 NAME=CV_Attila_Nagy
-all: build view
+all: build
 
 view:
 	mupdf $(NAME).pdf
