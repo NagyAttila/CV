@@ -37,7 +37,7 @@
 %%% ------------------------------------------------------------
 \newlength{\spacebox}
 \settowidth{\spacebox}{888888888888}				% Box to align text
-\newcommand{\sepspace}{\vspace*{0.75em}}			% Vertical space macro
+\newcommand{\sepspace}{\vspace*{0.5em}}			% Vertical space macro
 
 \newcommand{\MyName}[1]{
 		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1 		% Name
@@ -61,12 +61,16 @@
 		\textit{#1}}								% Entry name (birth, address, etc.)
 		\hspace{1.5em} #2 \par}					% Entry value
 
+\newcommand{\EducationEntryNoTime}[2]{
+		\noindent \textbf{#1} \par 					% Study
+		\noindent\hangindent=2em\hangafter=0 \small #2 	% Description
+		\normalsize \par}
+
 \newcommand{\EducationEntry}[4]{
 		\noindent \textbf{#1} \par 					% Study
 		\noindent \textit{#3} \hfill					% School
 		\colorbox{Black}{%
-			\parbox{6em}{%
-			\hfill\color{White}#2}} \par				% Duration
+			\hfill\color{White}#2} \par				% Duration
 		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
 		\normalsize \par}
 
@@ -91,7 +95,7 @@
 \MyName{Attila Nagy}
 \MySlogan{Curriculum Vitae}
 
-\sepspace
+\vspace*{0.8em}
 
 %%% Personal details
 %%% ------------------------------------------------------------
@@ -101,19 +105,27 @@
 \PersonalEntry{Address}{2A Mejerigatan}
 \PersonalEntry{}{41276, Gothenburg, Sweden}
 \PersonalEntry{Phone}{0046 768947275}
-\PersonalEntry{Mail}{\url{nagat@student.chalmers.se}}
+\PersonalEntry{Mail}{nagat@student.chalmers.se}
+%\PersonalEntry{Mail}{\url{nagat@student.chalmers.se}}
 
 %%% Education
 %%% ------------------------------------------------------------
 \NewPart{Education}{}
 
-\EducationEntry{MSc. Computer Science}{2012-2014}{University of Gothenburg, Sweden}{Transcript of records is available on demand.}
+\EducationEntry{MSc. Computer Science}{09/2012 -- 04/2014}
+  {University of Gothenburg, Sweden}{Transcript of records is available on demand.\\
+  Thesis: Energy Efficient, High-speed Communication in Wireless Sensor Networks}
 \sepspace
-\EducationEntry{ERASMUS}{2008}{University of Applied Sciences Ravensburg-Weingarten, Germany}{}
-\EducationEntry{BSc. Electrical Engineering}{2004-2009}{Obuda University, Hungary}{}
+
+\EducationEntry{ERASMUS}{09/2008 -- 01/2009}
+  {University of Applied Sciences Ravensburg-Weingarten, Germany}{\vspace*{-1em}}
+\sepspace
+
+  \EducationEntry{BSc. Electrical Engineering}{09/2004 -- 06/2009}{Obuda University, Hungary}{Specialization: Embedded Systems\\
+  Thesis: Robot Simulation in OpenGL Environment}
 
 \NewPart{Work}{}
-\WorkEntry{Software Engineer}{2009-2012}{Nokia Siemens Networks}
+\WorkEntry{Nokia Siemens Networks}{08/2009 -- 08/2012}{Software Engineer, Budapest, Full-time}
 
 \SkillsEntry{Programming:}{C/C++, Python, Perl, BASH}
 
@@ -133,7 +145,7 @@ Reference is available on demand.
 \SkillsEntry{}{Hungarian (mother tongue)}
 \SkillsEntry{}{English (fluent)}
 \SkillsEntry{}{Swedish (basic)}
-\SkillsEntry{}{German (basic)}
+%\SkillsEntry{}{German (basic)}
 
 \NewPart{Interest}{}
 \SkillsEntry{Technical:}{functional programming}
@@ -146,21 +158,25 @@ Reference is available on demand.
 
 %%% Work experience
 %%% ------------------------------------------------------------
-\NewPart{Work experience}{}
+\NewPart{Work Projects}{}
 
-\EducationEntry{Software Engineer}{2009-2012}{Nokia Siemens Networks, Budapest, Full-time}{During my three years at NSN, I was part of two teams; both followed agile principles and aimed to incorporate scrum methodologies into the daily work. On top of that, in my last year I became the scrum master of a team of 6 people. As for the work, in my first year I mainly was occupied by unit testing using a Nokia specific language, call TNSDL. Later I moved to a newly formed team requiring more complex and deeper knowledge in the given field. My tasks in this team covered several stages of the development process including implementation, unit and functional testing, and maintenance using a wide range of programming languages, tools and protocols, such as: C++, Python, Perl, BASH, GDB, oProfile, Valgrind, CxxTest, testAnt, Jenkins and LDAP.}
-\sepspace
+\EducationEntryNoTime{Nokia Siemens Networks Years}{In this project I mainly was occupied by unit testing using a Nokia specific language, call TNSDL. Later I moved to DXA, a project started from scratch requiring more complex and deeper knowledge.}
+
+\EducationEntry{}{08/2009 -- 05/2010}{HLR}{In this project I mainly was occupied by unit testing using a Nokia specific language, call TNSDL. Later I moved to DXA, a project started from scratch requiring more complex and deeper knowledge.}
+
+\EducationEntry{}{05/2010 -- 08/2012}{DXA}{My tasks in this project covered several stages of the development process including implementation, unit and functional testing, and maintenance using a wide range of programming languages, tools and protocols, such as: C++, Python, Perl, BASH, GDB, oProfile, Valgrind, CxxTest, testAnt, Jenkins and LDAP. On top of that, in my last year I became the scrum master of a team of 6 people.}
+
 %%% Student Projects
 %%% ------------------------------------------------------------
 \NewPart{Student Projects}{}
 
-\EducationEntry{Master's Student Years}{2013-2014}{Thesis}{The thesis involved an already existing low-power, low-delay, opportunistic routing protocol for wireless sensor networks implemented on the TinyOS platform using a component-based, event-driven programming language devised for embedded systems, called nesC. My task was to extend this protocol for bulk-transfer scenarios and to test it on real testbeds. Future publication on this work is highly probable.}
-\EducationEntry{}{2013-2014}{Student Research}{Beside the course lectures and laboratory exercises, I was part of a research project cooperating with three lecturers from Chalmers University. The project involved smart meter disaggregation and automatic classification by several classifier algorithms, mostly support vector machine, using electricity consumption data from smart grid networks.}
-\EducationEntry{}{2013-2014}{Carolo Cup Project}{Carolo Cup is an international student competition for self-driven miniature vehicles organized annually in Germany. During the preparation for the next competition held in February, 2014, I further experienced the merits of team work in the perspective of the team leader for the software team containing students from both Gothenburg and Chalmers Universities.}
+\EducationEntry{Master's Student Years}{06/2013 -- 04/2014}{Thesis}{The thesis involved an already existing low-power, low-delay, opportunistic routing protocol for wireless sensor networks implemented on the TinyOS platform using a component-based, event-driven programming language devised for embedded systems, called nesC. My task was to extend this protocol for bulk-transfer scenarios and to test it on real testbeds. Future publication on this work is highly probable.}
+\EducationEntry{}{10/2013 -- 03/2014}{Student Research}{Beside the course lectures and laboratory exercises, I was part of a research project cooperating with three lecturers from Chalmers University. The project involved smart meter disaggregation and automatic classification by several classifier algorithms, mostly support vector machine, using electricity consumption data from smart grid networks.}
+\EducationEntry{}{09/2013 -- 02/2014}{Carolo Cup Project}{Carolo Cup is an international student competition for self-driven miniature vehicles organized annually in Germany. During the preparation for the next competition held in February, 2014, I further experienced the merits of team work in the perspective of the team leader for the software team containing students from both Gothenburg and Chalmers Universities.}
 
 \sepspace
-\EducationEntry{Bachelor's Student Years}{2009}{Thesis}{Robot simulation in a 3D, OpenGL environment using C language with GLUT API.}
-\EducationEntry{}{2008}{Student Project}{Assembly of a remote controlled miniature car using an 8 bit Atmega micro-controller, DC motors, a Bluegiga WT12 bluetooth module and a purely mechanical miniature car. In this project, finally I had the opportunity to try out a subset of the techniques and technologies that I learned about during my lectures, namely: the design and simulation of a circuit diagram and layout using EAGEL, etching of a printed circuit board, soldering and assembly of the components.}
+\EducationEntry{Bachelor's Student Years}{01/2009 -- 05/2009}{Thesis}{Robot simulation in a 3D, OpenGL environment using C language with GLUT API.}
+\EducationEntry{}{01/2008 -- 05/2008}{Student Project}{Assembly of a remote controlled miniature car using an 8 bit Atmega micro-controller, DC motors, a Bluegiga WT12 bluetooth module and a purely mechanical miniature car. Finally I had the opportunity to try out a subset of the techniques and technologies that I learned about during my lectures, namely: the design and simulation of a circuit diagram and layout using EAGEL, etching of a printed circuit board, soldering and assembly of the components.}
 
 %% Publications
 %%% ------------------------------------------------------------
