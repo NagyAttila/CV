@@ -1,0 +1,168 @@
+%%% LaTeX Template: Curriculum Vitae
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com.
+%%% Date: July 2011
+
+%%% ------------------------------------------------------------
+%%% BEGIN PREAMBLE
+%%% ------------------------------------------------------------
+\documentclass[paper=a4,fontsize=11pt]{scrartcl}	 			% KOMA-article class
+
+%\usepackage[english]{babel}								% English language/hyphenation
+%\usepackage[protrusion=true,expansion=true]{microtype}		% Better typography
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amsthm}					% Math packages
+\usepackage[pdftex]{graphicx}								% Enable pdflatex
+\usepackage[svgnames]{xcolor}							% Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px									% Saving trees ;-)
+\usepackage{url}										% Clickable URL's
+\usepackage{wrapfig}									% Wrap text along figures
+
+\frenchspacing									% Better looking spacings after periods
+\pagestyle{empty}								% No pagenumbers/headers/footers
+%\usepackage{bbding}									% Symbols
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}							% Custom sectioning (see below)
+
+\sectionfont{%									% Change font of \section command
+  \usefont{OT1}{phv}{b}{n}%					% bch-b-n: CharterBT-Bold font
+  \sectionrule{0pt}{0pt}{-5pt}{3pt}
+	}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{888888888888}				% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}			% Vertical space macro
+
+\newcommand{\MyName}[1]{
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1 		% Name
+		\par \normalsize \normalfont}
+
+\newcommand{\MySlogan}[1]{
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1} % Slogan (optional)
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 		% Indentation
+		\parbox{\spacebox}{						% Box to align text
+		\textit{#1}}								% Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}					% Entry value
+
+\newcommand{\SkillsEntry}[2]{						% Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 		% Indentation
+		\parbox{\spacebox}{						% Box to align text
+		\textit{#1}}								% Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}					% Entry value
+
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \par 					% Study
+		\noindent \textit{#3} \hfill					% School
+		\colorbox{Black}{%
+			\hfill\color{White}#2} \par				% Duration
+		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
+		\normalsize \par
+    }
+
+\newcommand{\WorkEntry}[4]{						% Same as \EducationEntry
+		\noindent \textbf{#1} \hfill 					% Jobname
+		\colorbox{Black}{\color{White}#2} \par		% Duration
+		\noindent \textit{#3} \par					% Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
+		\normalsize \par}
+
+
+
+%%% ------------------------------------------------------------
+%%% BEGIN DOCUMENT
+%%% ------------------------------------------------------------
+\begin{document}
+
+\MyName{Attila Nagy}
+\MySlogan{Curriculum Vitae}
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Date of Birth}{August 27, 1985}
+\PersonalEntry{Address}{Nordanvindsgatan 4A}
+\PersonalEntry{}{41767, Gothenburg, Sweden}
+\PersonalEntry{Phone}{+46 768947275}
+\PersonalEntry{Mail}{attilanagy85@gmail.com}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry{MSc. Computer Science}{09/2012 -- 04/2014}
+  {University of Gothenburg, Sweden}{Transcript of records is available on demand.\\
+  Thesis: Energy Efficient, High-speed Communication in Wireless Sensor Networks}
+\sepspace
+
+\EducationEntry{ERASMUS}{09/2008 -- 01/2009}
+  {University of Applied Sciences Ravensburg-Weingarten, Germany}{\vspace*{-1em}}
+\sepspace
+
+  \EducationEntry{BSc. Electrical Engineering}{09/2004 -- 06/2009}{Obuda University, Hungary}{Specialization: Embedded Systems\\
+  Thesis: Robot Simulation in OpenGL Environment}
+
+\NewPart{Work}{}
+\WorkEntry{Volvo Cars Corporation}{07/2014 -- 07/2016}{Self-Driving Car Engineering, Sweden, Full-time}
+
+\SkillsEntry{Programming:}{Matlab, Simulink, Python, C++}
+
+\SkillsEntry{Applications:}{Data-Analysis, Sensor-Fusion, Mapping, Logging}
+
+\SkillsEntry{Principles:}{Scrum, Agile}
+
+\sepspace
+
+\WorkEntry{Nokia Siemens Networks}{08/2009 -- 08/2012}{Software Engineer, Hungary, Full-time}
+
+\SkillsEntry{Programming:}{C/C++, Python, Perl, BASH}
+
+\SkillsEntry{Testing:}{CxxTest, testAnt, Jenkins}
+
+\SkillsEntry{Debugging:}{GDB, Valgrind, oProfile}
+
+\SkillsEntry{Principles:}{Scrum, Agile, TDD, KISS}
+
+\NewPart{Interest}{}
+\SkillsEntry{Technical:}{functional programming}
+\SkillsEntry{}{Haskell}
+\SkillsEntry{}{free/open-source software}
+
+\sepspace
+\SkillsEntry{Sports:}{rock climbing}
+\SkillsEntry{}{slacklining}
+\SkillsEntry{}{acroyoga}
+
+\NewPart{Work Projects}{}
+
+\EducationEntry{Volvo Cars Years}{07/2014 -- 07/2016}{Active-Safety}{I spend two years at Volvo Cars Corporation in Sweden as a Self-Driving Car engineer in the DriveMe project's Active-Safety team working on state-of-the-art technologies in the field of data logging, sensor fusion, and map creation. In the Active-Safety team I was mainly occupied by post-processing and fusing data from different GPS and LIDAR sensor providers.}
+
+\sepspace
+
+\EducationEntry{Nokia Siemens Networks Years}{08/2009 -- 05/2010}{HLR}{In this team I mainly was occupied by unit testing using a Nokia specific language, called TNSDL.}
+
+\EducationEntry{}{05/2010 -- 08/2012}{DXA}{My tasks in this project covered several stages of the development process including implementation, unit and functional testing, and maintenance using a wide range of programming languages, tools and protocols, such as: C++, Python, Perl, BASH, GDB, oProfile, Valgrind, CxxTest, testAnt, Jenkins and LDAP. On top of that, in my last year I became the scrum master of a team of 6 people}
+
+%%% Student Projects
+%%% ------------------------------------------------------------
+\NewPart{Student Projects}{}
+
+\EducationEntry{Master's Student Years}{06/2013 -- 04/2014}{Thesis}{The thesis involved a low-power, low-delay, opportunistic routing protocol for wireless sensor networks implemented on the TinyOS platform using a component-based, event-driven programming language devised for embedded systems, called nesC. My task was to extend this protocol for bulk-transfer scenarios and to test it on real testbeds.}
+\EducationEntry{}{10/2013 -- 03/2014}{Student Research}{Beside the course lectures and laboratory exercises, I was part of a research project cooperating with three lecturers from Chalmers University. The project involved smart meter disaggregation and automatic classification by several classifier algorithms, mostly support vector machine, using electricity consumption data from smart grid networks.}
+\EducationEntry{}{09/2013 -- 02/2014}{Carolo Cup}{Carolo Cup is an international student competition for self-driven miniature vehicles organized annually in Germany. During the preparation for the next competition held in February, 2014, I further experienced the merits of team work in the perspective of the team leader for the software team containing students from both Gothenburg and Chalmers Universities.}
+\sepspace
+\EducationEntry{Bachelor's Student Years}{01/2009 -- 05/2009}{Thesis}{Robot simulation in a 3D, OpenGL environment using C language with GLUT API.}
+\EducationEntry{}{01/2008 -- 05/2008}{Project Course}{Assembly of a remote controlled miniature car using an 8 bit Atmega micro-controller, DC motors, a Bluegiga WT12 bluetooth module and a purely mechanical miniature lego car.}
+
+\end{document}
