@@ -1,4 +1,4 @@
-NAME=CV_Attila_Nagy__Udacity
+NAME=CV_Attila_Nagy_simple
 PDF=$(NAME).pdf
 all: build update
 
