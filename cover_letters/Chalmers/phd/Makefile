@@ -1,4 +1,4 @@
-NAME=main
+NAME=cover_letter
 PDF=$(NAME).pdf
 all: build update
 
