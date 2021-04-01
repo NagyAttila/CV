@@ -76,12 +76,18 @@
 		\normalsize \par
     }
 
-\newcommand{\WorkEntry}[4]{						% Same as \EducationEntry
-		\noindent \textbf{#1} \hfill 					% Jobname
+\newcommand{\WorkEntry}[4]{					        % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill 				% Jobname
 		\colorbox{Black}{\color{White}#2} \par		% Duration
 		\noindent \textit{#3} \par					% Company
 		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
 		\normalsize \par}
+
+\newcommand{\ProjectEntry}[4]{
+		\noindent \textbf{#1} \hfill 	        	% Jobname
+		\colorbox{Black}{\color{White}#2} \par		% Duration
+		\noindent\hangindent=2em\hangafter=0 \small #3 	% Description
+		\normalsize \par \sepspace}
 
 
 
@@ -91,7 +97,7 @@
 \begin{document}
 
 \MyName{Attila Nagy}
-\MySlogan{Curriculum Vitae}
+%\MySlogan{Curriculum Vitae}
 
 %%% Personal details
 %%% ------------------------------------------------------------
@@ -102,8 +108,72 @@
 \PersonalEntry{GitHub}{https://github.com/NagyAttila}
 %\PersonalEntry{HomePage}{https://nagyattila.tech}
 
-%%% Education
+\NewPart{Introduction}{}
+
+I have a background in telecommunication, automotive industry and machine learning. In the recent years I have developed an interest in deep learning through self-studies, that led to my previous job at RumbleStrip. We worked on adaptive spoilers for the heavy truck industry to lower fuel consumption. Before that, I worked with self-driving cars at Volvo Cars in Active-Safety, and with 3G networks at Nokia Siemens Networks in Budapest. Currently I am working on PacketCore at Ericsson.
+
+My technical interest mostly rotates around open-source software development, cryptography, Linux, machine and deep learning, functional programming, and a little bit of web-development. In my working environment, I tend to be social and discuss books and podcasts I read and listened recently.
+
+My current greatest endeavour is to start my own company and work as a free-lancer.
+
+  %Most of my personal life I like to spend in nature doing sports like climbing, yoga, running, hiking and camping. When the winters are too rough on me, I like to indulge myself in board game nights and old science fiction movies from the 50's. Furthermore, I have great interest in culinary pleasures. As one of my hobbies, I build a thermostat box to be able experiment with different food fermentation methods. One of my success stories is tempeh from chickpeas, and currently focusing on fermentation with lentils and rice. As a final interest, I have good stories from my travels in Southeast Asia involving rocket launchers in Cambodia, acrobatics with monkeys in Indonesia, finding skeleton remains in a cave on The Philippines, and many more.
+
+%%% Work
 %%% ------------------------------------------------------------
+\NewPart{Work}{}
+
+\WorkEntry{HiQ, Consultant at Ericsson}{04/2020 -- Now}{Software Developer, Sweden, Full-time}
+
+\SkillsEntry{Roles:}{Functional Tester, System Tester, DevOps}
+
+\SkillsEntry{Programming:}{C++, TTCN}
+
+\SkillsEntry{Applications:}{LTE, PacketCore}
+
+%\SkillsEntry{Principles:}{Scrum, Agile}
+
+\sepspace
+
+\WorkEntry{RumbleStrip}{09/2017 -- 10/2019}{Software Architect and Developer, Sweden, Full-time}
+
+\SkillsEntry{Roles:}{SW Architect, Algorithm Developer}
+
+\SkillsEntry{Programming:}{Python, C, Matlab}
+
+\SkillsEntry{Applications:}{Adaptive Roof-Deflector, Data-Analysis}
+
+%\SkillsEntry{Principles:}{Scrum, Agile}
+
+\sepspace
+
+\WorkEntry{ÅF, Consultant at Volvo Cars}{07/2014 -- 07/2016}{Self-Driving Car Engineering, Sweden, Full-time}
+
+\SkillsEntry{Roles:}{Self-Driving Car Developer, Unit Tester}
+
+\SkillsEntry{Programming:}{Matlab, Simulink, Python, C++}
+
+\SkillsEntry{Applications:}{Active-Safety, Data-Analysis, Sensor-Fusion, Mapping, Logging}
+
+%\SkillsEntry{Principles:}{Scrum, Agile}
+
+\sepspace
+
+\WorkEntry{Nokia Siemens Networks}{08/2009 -- 08/2012}{Software Engineer, Hungary, Full-time}
+
+\SkillsEntry{Roles:}{Scrum Master, Functional Tester, Unit Tester, DevOps}
+
+\SkillsEntry{Programming:}{C/C++, Python, Perl, BASH, TNSDL, LDAP}
+
+%\SkillsEntry{Testing:}{CxxTest, testAnt, Jenkins}
+
+\SkillsEntry{Debugging:}{GDB, Valgrind, oProfile}
+
+%\SkillsEntry{Principles:}{Scrum, Agile, TDD}
+
+\clearpage
+
+%%%% Education
+%%%% ------------------------------------------------------------
 \NewPart{Education}{}
 
 \EducationEntry{Deep Learning Nanodegree}{01/2017 -- 06/2017}
@@ -113,9 +183,9 @@
  Assigment 4: Language-translation by Recurrent Neural Network\\
  Assigment 5: Face image generation by Generative Adversarial Networks \\
  Source-code: https://github.com/NagyAttila/Udacity\_DLND\_Assigments \\
- Syllabus: https://www.udacity.com/course/deep-learning-nanodegree--nd101 }
+ %Syllabus: https://www.udacity.com/course/deep-learning-nanodegree--nd101
+ }
 \sepspace
-
 
 \EducationEntry{MSc. Computer Science}{09/2012 -- 04/2014}
   {Chalmers University of Technology, Sweden}{Specialization: Distributed Systems and Networks\\
@@ -131,60 +201,14 @@
 \sepspace
 
 \EducationEntry{BSc. Electrical Engineering}{09/2004 -- 06/2009}{Obuda University, Hungary}{Specialization: Embedded Systems\\
-Thesis' Title: Robot Simulation in OpenGL Environment\\
+Thesis' Title: Robot Simulation isepspacenGL Environment\\
 Thesis' Keywords: Industrial robot simulation, OpenGL, C++. \\
 Student Project: Remote-controlled miniature car via bluetooth, 8-bit Atmega micro-controller}
 
-\clearpage
-\NewPart{Work}{}
-
-\WorkEntry{HiQ, Consultant at Ericsson}{04/2020 -- Now}{Software Developer, Sweden, Full-time}
-
-\SkillsEntry{Roles:}{Functional Tester, System Tester, DevOps}
-
-\SkillsEntry{Programming:}{C++, TTCN}
-
-\SkillsEntry{Applications:}{LTE, PacketCore}
-
-\SkillsEntry{Principles:}{Scrum, Agile}
-
-\sepspace
-
-\WorkEntry{RumbleStrip}{09/2017 -- 10/2019}{Software Architect and Developer, Sweden, Full-time}
-
-\SkillsEntry{Roles:}{SW Architect, Algorithm Developer}
-
-\SkillsEntry{Programming:}{Python, C, Matlab}
-
-\SkillsEntry{Applications:}{Adaptive Roof-Deflector, Data-Analysis}
-
-\SkillsEntry{Principles:}{Scrum, Agile}
-
-\sepspace
-
-\WorkEntry{ÅF, Consultant at Volvo Cars}{07/2014 -- 07/2016}{Self-Driving Car Engineering, Sweden, Full-time}
-
-\SkillsEntry{Roles:}{Self-Driving Car Developer, Unit Tester}
-
-\SkillsEntry{Programming:}{Matlab, Simulink, Python, C++}
-
-\SkillsEntry{Applications:}{Active-Safety, Data-Analysis, Sensor-Fusion, Mapping, Logging}
-
-\SkillsEntry{Principles:}{Scrum, Agile}
-
-\sepspace
-
-\WorkEntry{Nokia Siemens Networks}{08/2009 -- 08/2012}{Software Engineer, Hungary, Full-time}
-
-\SkillsEntry{Roles:}{Scrum Master, Functional Tester, Unit Tester, DevOps}
-
-\SkillsEntry{Programming:}{C/C++, Python, Perl, BASH, TNSDL, LDAP}
-
-\SkillsEntry{Testing:}{CxxTest, testAnt, Jenkins}
-
-\SkillsEntry{Debugging:}{GDB, Valgrind, oProfile}
-
-\SkillsEntry{Principles:}{Scrum, Agile, TDD}
+\NewPart{Languages}{}
+\SkillsEntry{ }{English}
+\SkillsEntry{}{Swedish}
+\SkillsEntry{}{Hungarian}
 
 \NewPart{Interest}{}
 \SkillsEntry{Technical:}{machine learning}
@@ -202,13 +226,51 @@ Student Project: Remote-controlled miniature car via bluetooth, 8-bit Atmega mic
 \SkillsEntry{Others:}{meditation}
 \SkillsEntry{}{politics}
 
+\clearpage
 
-% \NewPart{References}{}
-% \ReferenceEntry{David Andersson}{}{}
-% \SkillsEntry{Phone:}{+46 735803819}
-% \SkillsEntry{Email:}{david.andersson@nvidia.com}
-% \SkillsEntry{From:}{Volvo Cars Corporation}
-% \sepspace
+\NewPart{Projects}{}
+
+\ProjectEntry{HiQ, Consultant at Ericsson}{04/2020 -- Now}
+{
+    After 10 years I am back in Telecom working on the next generation of telecommunication networks. Most of my work
+    currently involves development on the PacketCore network, Functional Testing using TTCN and System Tests.
+}
+
+\ProjectEntry{RumbleStrip}{09/2017 -- 10/2019}
+{
+    Working with adaptive roof-deflectors for trucks using machine learning, AWS and embedded systems to lower fuel
+    consumption.  Mostly worked with a Bayesian Regression model for predicting the optimal position of the roof-
+    deflector.  But earlier at the proof of concept stage we experimented with a variant of K-Nearest- Neighbour
+    algorithm, Decision Trees and Deep Neural Networks.  At the end due to the lack of available data and limitations in
+    our product's HW, we decided to use a Bayesian Regression model.  Sensor data was collected using Python on a
+    RaspberryPi, stored in AWS, and evaluated in Matlab.  Later, our model was prototyped in an embedded environment on
+    a STM32 board, and field tested using LINAK-LA32 actuators on Volvo trucks.
+}
+
+\ProjectEntry{ÅF, Consultant at Volvo Cars}{07/2014 -- 07/2016}
+{
+    I worked as a SW developer in Active Safety in the Sensor Fusion team using Matlab and Simulink.  My work mostly
+    involved post-processing of sensory data for our particle filter algorithm, that fused our positions from the GPS
+    sensor and the IMU.
+}
+
+\ProjectEntry{Nokia Siemens Networks}{08/2009 -- 08/2012}
+{
+    As part of the HLR and DXA teams for 3G development, I worked in a cross-functional team, doing testing, coding and
+    maintenance using C++ and Python.
+}
+
+\NewPart{References}{}
+\ReferenceEntry{Milad Pouyanmehr}{}{}
+\SkillsEntry{Phone:}{+46 767607403}
+\SkillsEntry{Email:}{milad@rumblestrip.tech}
+\SkillsEntry{From:}{RumbleStrip}
+\sepspace
+
+\ReferenceEntry{David Andersson}{}{}
+\SkillsEntry{Phone:}{+46 735803819}
+\SkillsEntry{Email:}{david.andersson@nvidia.com}
+\SkillsEntry{From:}{Volvo Cars Corporation}
 
 % \ReferenceEntry{Joakim Lin-S\"orstedt}
 % \SkillsEntry{Phone:}{+46 723716181}
