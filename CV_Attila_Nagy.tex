@@ -19,6 +19,7 @@
 	\textheight=700px									% Saving trees ;-)
 \usepackage{url}										% Clickable URL's
 \usepackage{wrapfig}									% Wrap text along figures
+\usepackage{hyperref}
 
 \frenchspacing									% Better looking spacings after periods
 \pagestyle{empty}								% No pagenumbers/headers/footers
@@ -63,7 +64,7 @@
 
 \newcommand{\EducationEntry}[4]{
 		\noindent \textbf{#1} \par 					% Study
-		\noindent \textit{#3} \hfill					% School
+		\noindent \textit{#3} \hfill				% School
 		\colorbox{Black}{%
 			\hfill\color{White}#2} \par				% Duration
 		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
@@ -176,16 +177,22 @@ My current greatest endeavour is to start my own company and work as a free-lanc
 %%%% ------------------------------------------------------------
 \NewPart{Education}{}
 
+\EducationEntry{freeCodeCamp Certificates}{01/2020 -- 03/2020}
+{https://www.freecodecamp.org/ (Click on certificate)}
+{\href{https://www.freecodecamp.org/certification/fcc7d8027bd-7ee4-4ec3-816b-87c5087dab3c/responsive-web-design}{Certificate 1: Responsive Web Design} \\
+ \href{https://www.freecodecamp.org/certification/fcc7d8027bd-7ee4-4ec3-816b-87c5087dab3c/javascript-algorithms-and-data-structures}{Certificate 2: JavaScript Algorithms and Data Structures} \\
+ \href{https://www.freecodecamp.org/certification/fcc7d8027bd-7ee4-4ec3-816b-87c5087dab3c/front-end-libraries}{Certificate 3: Front End Libraries}
+}
+
 \EducationEntry{Deep Learning Nanodegree}{01/2017 -- 06/2017}
 {Udacity, www.udacity.com} {Assigment 1: Vanilla Neural Network from scratch\\
  Assigment 2: Image Classification by Convolutional Neural Network\\
  Assigment 3: TV script generation by Recurrent Neural Network\\
  Assigment 4: Language-translation by Recurrent Neural Network\\
  Assigment 5: Face image generation by Generative Adversarial Networks \\
- Source-code: https://github.com/NagyAttila/Udacity\_DLND\_Assigments \\
+ Source-code: https://github.com/NagyAttila/Udacity\_DLND\_Assigments
  %Syllabus: https://www.udacity.com/course/deep-learning-nanodegree--nd101
  }
-\sepspace
 
 \EducationEntry{MSc. Computer Science}{09/2012 -- 04/2014}
   {Chalmers University of Technology, Sweden}{Specialization: Distributed Systems and Networks\\
@@ -193,12 +200,10 @@ My current greatest endeavour is to start my own company and work as a free-lanc
   Thesis' Keywords: Opportunistic Routing, Bulk-transfer, TinyOS, nesC\\
   Student Project: Carolo Cup, Germany, self-driving miniature cars, team leader\\
   Research Project: Power consumtion disaggregation and clsassification with SVM}
-\sepspace
 
 \EducationEntry{ERASMUS Scholarship}{09/2008 -- 01/2009}
 {University of Applied Sciences Ravensburg-Weingarten, Germany}
 {Field: Embedded Systems }
-\sepspace
 
 \EducationEntry{BSc. Electrical Engineering}{09/2004 -- 06/2009}{Obuda University, Hungary}{Specialization: Embedded Systems\\
 Thesis' Title: Robot Simulation isepspacenGL Environment\\
@@ -222,9 +227,9 @@ Student Project: Remote-controlled miniature car via bluetooth, 8-bit Atmega mic
 \SkillsEntry{}{running}
 \SkillsEntry{}{yoga}
 
-\sepspace
-\SkillsEntry{Others:}{meditation}
-\SkillsEntry{}{politics}
+%\sepspace
+%\SkillsEntry{Others:}{meditation}
+%\SkillsEntry{}{politics}
 
 \clearpage
 
@@ -270,12 +275,12 @@ Student Project: Remote-controlled miniature car via bluetooth, 8-bit Atmega mic
 \ReferenceEntry{David Andersson}{}{}
 \SkillsEntry{Phone:}{+46 735803819}
 \SkillsEntry{Email:}{david.andersson@nvidia.com}
-\SkillsEntry{From:}{Volvo Cars Corporation}
+\SkillsEntry{From:}{Volvo Cars}
 
 % \ReferenceEntry{Joakim Lin-S\"orstedt}
 % \SkillsEntry{Phone:}{+46 723716181}
 % \SkillsEntry{Email:}{jaokim.lin-sorstedt@zenuity.com}
-% \SkillsEntry{From:}{Volvo Cars Corporation}
+% \SkillsEntry{From:}{Volvo Cars
 % \sepspace
 
 \end{document}
