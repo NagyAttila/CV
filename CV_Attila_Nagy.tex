@@ -19,7 +19,8 @@
 	\textheight=700px									% Saving trees ;-)
 \usepackage{url}										% Clickable URL's
 \usepackage{wrapfig}									% Wrap text along figures
-\usepackage{hyperref}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+
 
 \frenchspacing									% Better looking spacings after periods
 \pagestyle{empty}								% No pagenumbers/headers/footers
@@ -180,13 +181,13 @@ My current greatest endeavour is to start my own company and work as a free-lanc
 \EducationEntry{freeCodeCamp Certificates}{01/2020 -- 03/2020}
 {\href{https://www.freecodecamp.org}{www.freecodecamp.org}}
 {Certificate 1: Responsive Web Design
-\href{https://www.freecodecamp.org/certification/fcc7d8027bd-7ee4-4ec3-816b-87c5087dab3c/responsive-web-design}{[Link]}
+\href{https://www.freecodecamp.org/certification/fcc7d8027bd-7ee4-4ec3-816b-87c5087dab3c/responsive-web-design}{[Link To Certificate]}
 \\
 Certificate 2: JavaScript Algorithms and Data Structures
-\href{https://www.freecodecamp.org/certification/fcc7d8027bd-7ee4-4ec3-816b-87c5087dab3c/javascript-algorithms-and-data-structures}{[Link]}
+\href{https://www.freecodecamp.org/certification/fcc7d8027bd-7ee4-4ec3-816b-87c5087dab3c/javascript-algorithms-and-data-structures}{[Link To Certificate]}
 \\
 Certificate 3: Front End Libraries
-\href{https://www.freecodecamp.org/certification/fcc7d8027bd-7ee4-4ec3-816b-87c5087dab3c/front-end-libraries}{[Link]}
+\href{https://www.freecodecamp.org/certification/fcc7d8027bd-7ee4-4ec3-816b-87c5087dab3c/front-end-libraries}{[Link To Certificate]}
 \\
 Content: React, Redux, Boostrap, jQuery, CSS, SASS, AJAX, JavaScript
 }
@@ -247,46 +248,41 @@ Student Project: Remote-controlled miniature car via bluetooth, 8-bit Atmega mic
 \NewPart{Projects}{}
 
 \ProjectEntry{HiQ, Consultant at Ericsson}{04/2020 -- Now}
-{
-    After 10 years I am back in Telecom working on the next generation of telecommunication networks. Most of my work
-    currently involves development on the PacketCore network, Functional Testing using TTCN and System Tests.
+{After 10 years I am back in Telecom working on the next generation of telecommunication networks. Most of my work
+currently involves development on the PacketCore network, Functional Testing using TTCN and System Tests.
 }
 
 \ProjectEntry{RumbleStrip}{09/2017 -- 10/2019}
-{
-    Working with adaptive roof-deflectors for trucks using machine learning, AWS and embedded systems to lower fuel
-    consumption.  Mostly worked with a Bayesian Regression model for predicting the optimal position of the roof-
-    deflector.  But earlier at the proof of concept stage we experimented with a variant of K-Nearest- Neighbour
-    algorithm, Decision Trees and Deep Neural Networks.  At the end due to the lack of available data and limitations in
-    our product's HW, we decided to use a Bayesian Regression model.  Sensor data was collected using Python on a
-    RaspberryPi, stored in AWS, and evaluated in Matlab.  Later, our model was prototyped in an embedded environment on
-    a STM32 board, and field tested using LINAK-LA32 actuators on Volvo trucks.
+{In this project, I mostly worked with a Bayesian Regression model for predicting the optimal position of the
+\mbox{roof-deflector} on Volvo Trucks.  But earlier at the proof of concept stage we experimented with a variant of
+\mbox{K-Nearest-Neighbour} algorithm, Decision Trees and Deep Neural Networks.  At the end, due to the lack of available
+data and limitations in our product's HW, we decided to use a Bayesian Regression model.  Sensor data was collected
+using Python on a RaspberryPi, stored in AWS, and evaluated in Matlab.  Later, our model was prototyped in an embedded
+environment on a STM32 board and field tested using \mbox{LINAK-LA32} actuators.
 }
 
 \ProjectEntry{ÅF, Consultant at Volvo Cars}{07/2014 -- 07/2016}
-{
-    I worked as a SW developer in Active Safety in the Sensor Fusion team using Matlab and Simulink.  My work mostly
-    involved post-processing of sensory data for our particle filter algorithm, that fused our positions from the GPS
-    sensor and the IMU.
+{I worked as a SW developer in Active Safety in the Sensor Fusion team using Matlab and Simulink.  My work mostly
+involved \mbox{post-processing} of sensory data for our particle filter algorithm, that fused our positions from the GPS
+sensor and the IMU.
 }
 
 \ProjectEntry{Nokia Siemens Networks}{08/2009 -- 08/2012}
-{
-    As part of the HLR and DXA teams for 3G development, I worked in a cross-functional team, doing testing, coding and
-    maintenance using C++ and Python.
+{As part of the HLR and DXA teams for 3G development, I worked in a cross-functional team, doing testing, coding and
+maintenance using C++ and Python.
 }
 
-\NewPart{References}{}
-\ReferenceEntry{Milad Pouyanmehr}{}{}
-\SkillsEntry{Phone:}{+46 767607403}
-\SkillsEntry{Email:}{milad@rumblestrip.tech}
-\SkillsEntry{From:}{RumbleStrip}
-\sepspace
+%\NewPart{References}{}
+%\ReferenceEntry{Milad Pouyanmehr}{}{}
+%\SkillsEntry{Phone:}{+46 767607403}
+%\SkillsEntry{Email:}{milad@rumblestrip.tech}
+%\SkillsEntry{From:}{RumbleStrip}
+%\sepspace
 
-\ReferenceEntry{David Andersson}{}{}
-\SkillsEntry{Phone:}{+46 735803819}
-\SkillsEntry{Email:}{david.andersson@nvidia.com}
-\SkillsEntry{From:}{Volvo Cars}
+%\ReferenceEntry{David Andersson}{}{}
+%\SkillsEntry{Phone:}{+46 735803819}
+%\SkillsEntry{Email:}{david.andersson@nvidia.com}
+%\SkillsEntry{From:}{Volvo Cars}
 
 % \ReferenceEntry{Joakim Lin-S\"orstedt}
 % \SkillsEntry{Phone:}{+46 723716181}
